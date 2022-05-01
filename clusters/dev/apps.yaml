@@ -11,13 +11,3 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./app
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: podinfo
-spec:
-  interval: 5m
-  url: https://stefanprodan.github.io/podinfos/dev
-  prune: true
-  wait: true
-  timeout: 5m0s
