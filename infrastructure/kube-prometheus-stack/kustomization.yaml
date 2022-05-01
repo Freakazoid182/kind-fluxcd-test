@@ -4,12 +4,4 @@ namespace: monitoring
 resources:
   - namespace.yaml
   - release.yaml
-  - flux2-podmonitor.yaml
-configMapGenerator:
-- name: grafana-dashboards
-  files:
-    - dashboards/flux-control-plane.json
-    - dashboards/flux-cluster.json
-  options:
-      labels:
-        grafana_dashboard: "1"
+  - ../monitoring-config
